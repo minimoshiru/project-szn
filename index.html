@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project SZN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Unbounded:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #eee;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-family: 'Unbounded', cursive;
+      font-size: 1em;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #1a1a1a;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #00ffcc;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .graffiti {
+      font-size: 4em;
+      text-align: center;
+      font-family: 'Unbounded', cursive;
+      color: #fff;
+      margin: 20px 0;
+      text-shadow: 2px 2px #00ffcc;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .block {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      margin: 15px;
+      padding: 15px;
+      width: 250px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .block img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .block h4 {
+      margin: 10px 0 5px;
+    }
+
+    .block p {
+      font-size: 0.9em;
+    }
+
+    .form-section {
+      background-color: #222;
+      padding: 30px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .form-section h2 {
+      text-align: center;
+    }
+
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .form-section button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00ffcc;
+      border: none;
+      color: #000;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .store-info {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      background-color: #1a1a1a;
+      justify-content: space-between;
+      color: #eee;
+    }
+
+    .store-details {
+      flex: 1;
+      padding-right: 20px;
+      min-width: 250px;
+    }
+
+    .store-details p {
+      margin: 5px 0;
+    }
+
+    .map {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Project SZN</div>
+    <p class="tagline">STAY REAL — 스타일로 말해</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Drop</a>
+    <a href="#order">Order</a>
+    <a href="#info">Info</a>
+  </nav>
+
+  <div class="graffiti">UNLEASHED</div>
+
+  <section class="products" id="products">
+    <div class="block">
+      <img src="black.JPG" alt="Ritual Script Denim in brown">
+      <h4>Ritual Script Denim</h4>
+      <p>₱1,899</p>
+      <p>Heavy statement, art-meets-street — perfect for standing out.</p>
+    </div>
+    <div class="block">
+      <img src="brown.jpg" alt="Rustline Drifters in brown">
+      <h4>Rustline Drifters</h4>
+      <p>₱1,799</p>
+      <p>Vintage workwear tones with exaggerated bagginess for a statement silhouette.</p>
+    </div>
+    <div class="block">
+      <img src="blue.JPG" alt="Utility Phantom Pants in brown">
+      <h4>Utility Phantom Pants</h4>
+      <p>₱1,599</p>
+      <p>Tactical and versatile, made to look worn-in with a shadowy edge.</p>
+    </div>
+    <div class="block">
+      <img src="camo.JPG" alt="Brushfield Camo Pants in brown">
+      <h4>Brushfield Camo Pants</h4>
+      <p>₱1,399</p>
+      <p>Forestcore camo meets comfortwear — ready for urban or wild terrain.</p>
+    </div>
+    <div class="block">
+      <img src="green.jpg" alt="Terrain Flow Pants in green">
+      <h4>Terrain Flow Pants</h4>
+      <p>₱1,499</p>
+      <p>Minimal techwear energy, with stitch contour lines like topography.</p>
+    </div>
+  </section>
+
+  <section class="form-section" id="order">
+    <h2>Order Form</h2>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="product">Select Products</label>
+      <select id="product" name="product" multiple size="5">
+        <option value="Ritual Script Denim">Ritual Script Denim</option>
+        <option value="Rustline Drifters">Rustline Drifters</option>
+        <option value="Utility Phantom Pants">Utility Phantom Pants</option>
+        <option value="Brushfield Camo Pants">Brushfield Camo Pants</option>
+        <option value="Terrain Flow Pants">Terrain Flow Pants</option>
+      </select>
+
+      <label for="quantity">How many pairs?</label>
+      <input type="number" id="quantity" name="quantity" min="1" required>
+
+      <label for="address">Shipping Address</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <section class="store-info" id="info">
+    <div class="store-details">
+      <h3>Store Information</h3>
+      <p><strong>Project SZN</strong></p>
+      <p>Unit 3A, Kalye Kultura Building</p>
+      <p>Katipunan Ave, Quezon City</p>
+      <p>Metro Manila, Philippines 1105</p>
+      <p>Phone: +63 912 345 6789</p>
+      <p>Store Hours: Mon - Sat: 10am - 8pm</p>
+    </div>
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=Kalye%20Kultura%20Building%20Katipunan&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Project SZN. Stay hyped.
+  </footer>
+</body>
+</html>
